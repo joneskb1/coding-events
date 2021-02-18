@@ -1,5 +1,5 @@
-body {
-font-size:18px;
-color: teal;
+.noEvents {
+color: red;
+text-align: center;
+font-weight: bold;
 }
-

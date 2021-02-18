@@ -8,15 +8,19 @@
 <nav th:replace="fragments :: navigation"></nav>
 
 
-<p th:unless="${events} and ${events.size()}">No events!</p>
-    <table class="table table-striped">
-        <thead>
+<p th:unless="${events} and ${events.size()}" class="noEvents">No events!</p>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-light">
             <tr>
                 <th>Name</th>
+                <th>Description</th>
+                <th>Tech Hub Address</th>
             </tr>
         </thead>
         <tr th:each="event : ${events}">
-            <td th:text="${event}"></td>
+            <td th:text="${event.key}"></td>
+            <td th:text="${event.value}"></td>
+            <td>123 Tech Way</td>
     </table>
 </body>
 </html>
