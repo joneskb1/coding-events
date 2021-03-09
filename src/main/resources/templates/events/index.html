@@ -11,12 +11,25 @@
             <th>ID</th>
             <th>Name</th>
             <th>Description</th>
+            <th>Contact email</th>
+            <th># Attendees</th>
+            <th>Address</th>
+            <th>Must Register?</th>
+            <th>Type</th>
+
         </tr>
     </thead>
     <tr th:each="event : ${events}">
         <td th:text="${event.id}"></td>
         <td th:text="${event.name}"></td>
         <td th:text="${event.description}"></td>
+        <td th:text= "${event.contactEmail}"></td>
+        <td th:text= "${event.numAttendees}"></td>
+        <td th:text= "${event.address}"></td>
+        <td th:text= "${event.register}"></td>
+        <td th:text= "${event.type.displayName}"></td>
+
+
     </tr>
 </table>
 
